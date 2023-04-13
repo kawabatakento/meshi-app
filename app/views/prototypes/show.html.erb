@@ -5,6 +5,7 @@
         <%= @prototype.title %>
       </p>
       <%= link_to "by #{@prototype.user.name}", user_path(@prototype.user),class: :prototype__user %>
+
         <%#条件分岐%>
       <% if user_signed_in? && current_user.id == @prototype.user_id %>
         <div class="prototype__manage">
