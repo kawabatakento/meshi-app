@@ -28,7 +28,7 @@
 - belongs_to prototype
 
 
-## prototypes テーブル
+##  テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -36,6 +36,8 @@
 | title  | string | null: false |
 | catch_copy | text | null:false |
 | concept   | text | null: false |
+| prefecture_id      | integer    | null: false                    |
+| city               | string     | null: false                    |
 
 - belongs_to user
 - has_many comments
