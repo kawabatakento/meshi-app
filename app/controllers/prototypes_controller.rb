@@ -4,6 +4,14 @@ class PrototypesController < ApplicationController
 
   def index
     @prototypes = Prototype.all
+    
+    if params[:gender_id].present?
+      @prototypes = @prototypes.where(gender_id: params[:gender_id])
+    end
+  
+    if params[:age_id].present?
+      @prototypes = @prototypes.where(age_id: params[:age_id])
+    end
   end
 
   def new
@@ -47,12 +55,10 @@ class PrototypesController < ApplicationController
     redirect_to root_path
   end
 
-
-
   private
 
   def prototype_params
-  params.require(:prototype).permit(:title, :catch_copy, :concept, :image).merge(user_id: current_user.id)
+  params.require(:prototype).permit(:title, :catch_copy, :concept, :image, :gender_id, :age_id, :occupation_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

@@ -1,10 +1,17 @@
 class Prototype < ApplicationRecord
+   # Active Hash の関連付けを有効にする
+   extend ActiveHash::Associations::ActiveRecordExtensions
+
   # バリデーション
   validates :title, presence: true
   validates :catch_copy, presence: true
   validates :concept, presence: true
 
   belongs_to :user
+  belongs_to_active_hash :gender
+  belongs_to_active_hash :age
+  belongs_to_active_hash :occupation
+
   has_many :comments, dependent: :destroy
 
   # ActiveStorageの設定
