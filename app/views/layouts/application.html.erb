@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ランクユ</title>
+    <title>モブスト</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +21,7 @@
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "めし増し", new_prototype_path, class: :nav__btn %>
+              <%= link_to "モブジェネレーション", new_prototype_path, class: :nav__btn %>
             </div>
             <% else %>
             <div class="nav__right">
@@ -35,7 +35,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">ランクユ © All rights reserved.</p>
+      <p class="copyright">モブスト © All rights reserved.</p>
     </footer>
   </body>
 </html>

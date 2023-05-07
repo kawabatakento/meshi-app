@@ -1,11 +1,11 @@
 <%= form_with model: @prototype, local: true do |f|%>
   <div class="field">
-    <%= f.label :title, "飯" %><br />
+    <%= f.label :title, "名前" %><br />
     <%= f.text_field :title, id:"prototype_title", value: @prototype.title.presence %>
   </div>
 
   <div class="field">
-    <%= f.label :catch_copy, "キャッチコピー" %><br />
+    <%= f.label :catch_copy, "口グセ" %><br />
     <%= f.text_area :catch_copy, class: :form__text, id:"prototype_catch_copy", value: @prototype.catch_copy.presence %>
   </div>
 
@@ -15,7 +15,22 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "飯の画像" %><br />
+    <%= f.label :gender_id, "性別" %><br />
+    <%= f.collection_select :gender_id, Gender.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age_id, "年齢" %><br />
+    <%= f.collection_select :age_id, Age.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occupation_id, "職業" %><br />
+    <%= f.collection_select :occupation_id, Occupation.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "イメージ" %><br />
     <%= f.file_field :image, id:"prototype_image" %>
   </div>
 

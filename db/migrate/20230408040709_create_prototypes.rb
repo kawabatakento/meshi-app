@@ -5,6 +5,10 @@ class CreatePrototypes < ActiveRecord::Migration[6.0]
       t.string :title, null: false
       t.text :catch_copy, null: false
       t.text :concept, null: false
+      t.integer :gender_id, null: false
+      t.integer :age_id, null: false
+      t.integer :occupation_id, null: false
+
       
       t.timestamps
     end
