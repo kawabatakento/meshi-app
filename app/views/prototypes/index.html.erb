@@ -2,8 +2,8 @@
   <div class="inner">
 
   <%= form_tag(prototypes_path, method: :get, class: "search-form") do %>
-  <%= select_tag :gender_id, options_for_select(Gender.all.map { |gender| [gender.name, gender.id] }, params[:gender_id]), prompt: '性別を選択' %>
-  <%= select_tag :age_id, options_for_select(Age.all.map { |age| [age.name, age.id] }, params[:age_id]), prompt: '年齢を選択' %>
+  <%= select_tag :gender_id, options_for_select(Gender.all.map { |gender| [gender.name, gender.id] }, params[:gender_id]), prompt: '性別で検索' %>
+  <%= select_tag :age_id, options_for_select(Age.all.map { |age| [age.name, age.id] }, params[:age_id]), prompt: '年齢で検索' %>
   <%= submit_tag "検索", class: "btn" %>
   <% end %>
 

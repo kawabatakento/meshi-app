@@ -119,16 +119,17 @@ a {
 }
 
 .search-form {
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  border: 2px solid #2589d0;
+  border: 2px solid #db4040;
   border-radius: 25px;
 }
 
 .search-form select {
-  width: 250px;
+  width: 200px;
   height: 45px;
   padding: 5px 15px;
   border: none;
@@ -138,7 +139,7 @@ a {
 }
 
 .search-form select::placeholder {
-  color: #767d83;
+  color: #fff;
 }
 
 .search-form input[type="submit"] {
@@ -193,6 +194,10 @@ a {
   color: #999;
   text-align: right;
   text-decoration: underline;
+}
+
+.btn {
+  color: #f6f6f6;
 }
 
 /* 詳細ページ */
