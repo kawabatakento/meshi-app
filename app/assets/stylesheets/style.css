@@ -74,7 +74,8 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87a0fa;
+  color: #2c278d;
+  border: 1px #2c278d solid;
   text-decoration: none;
   user-select: none;
 }
