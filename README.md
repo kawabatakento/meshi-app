@@ -28,7 +28,7 @@
 - belongs_to prototype
 
 
-##  テーブル
+## prototypes テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
